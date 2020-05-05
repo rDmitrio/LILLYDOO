@@ -1,0 +1,116 @@
+  @import "@/assets/scss/_variables.scss";
+  
+  h1 {
+    font-family: Museo-300,Helvetica,Roboto,Arial,sans-serif;
+    font-size: 2.625rem;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    font-weight: 400;
+
+    @media only screen and (max-width: 834px) {
+      font-size: 2.188rem;
+    }
+  }
+
+  h2, h3, h4, h5, h6 {
+    color: #000;
+    font-family: cera_promedium,Helvetica,Roboto,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: .2rem;
+    margin-top: .2rem;
+    text-rendering: optimizeLegibility;
+
+    @media only screen and (min-width: $desktop-width) {
+      line-height: 1;
+    }
+  }
+
+  section.bright img {
+    margin-bottom: 8px;
+  }
+
+  .text-center {
+    text-align: center !important;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+  }
+
+  img {
+    flex-shrink: 0;
+  }
+
+  .row {
+    margin: 0 auto;
+    max-width: 80rem;
+    width: 100%;
+    padding: 2rem 0 2rem 0;
+
+    img {
+     margin: 0 0 2rem 0;
+    }
+
+    &:after, &:before {
+      content: " ";
+      display: table;
+    }
+
+    &:after {
+      clear: both;
+    }
+  }
+
+  .columns {
+    padding-bottom: .2rem;
+
+    @media only screen and (min-width: $desktop-width) {
+      position: relative;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      float: left;
+    }
+  }
+
+  .columns+.columns:last-child {
+    float: right;
+  }
+
+
+  dl, ol, ul {
+    font-family: cera_proregular, Helvetica, Roboto, Arial,sans-serif;
+    font-size: .938rem;
+    line-height: 1.4;
+    list-style-position: outside;
+    margin-bottom: 2rem;
+    padding-inline-start: 17px;
+  }
+
+  li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+
+  p {
+    font-size: .938rem;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-family: cera_proregular, Helvetica, Roboto, Arial, sans-serif;
+    font-size: .938rem;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    text-rendering: optimizeLegibility;
+  }
+
+  .bright {
+    background-color: white;
+  }
+
+  .dark {
+    background: #f8f8f8;
+  }
