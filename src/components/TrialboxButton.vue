@@ -20,8 +20,8 @@ export default Vue.extend({
     },
     title: {
       required: false,
-      type: String,
-      default: '1'
+      type: Number,
+      default: 1
     },
     description: {
       required: false,
@@ -59,14 +59,18 @@ export default Vue.extend({
  .trialbox-button {
     border: 1px solid #7c7c7c;
     text-align: center;
-    width: 30%;
-    max-width: 78px;
+    width: calc(29% - 10px);
     padding: 7px 5px 2px 5px;
     color: #7c7c7c;
     margin-right: 10px;
     display: inline-block;
     cursor: pointer;
     margin-bottom: 10px;
+
+    @media only screen and (min-width: $desktop-width) {
+       max-width: 78px;
+       width: calc(30% - 10px);
+     }
 
     p {
       font-size: 1.3rem;

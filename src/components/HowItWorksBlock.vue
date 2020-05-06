@@ -1,6 +1,9 @@
 <template>
-  <div class="how-it-works-block">
-    <img :src="require(`@/assets/img/howItWorks/${img}`)">
+  <div class="how-it-works-block text-center">
+    <img
+      :src="require(`@/assets/img/howItWorks/${img}`)"
+      loading="lazy"
+    >
     <h4>{{ title }}</h4>
     <p>{{ desc }}</p>
 
@@ -56,8 +59,11 @@ export default Vue.extend({
    padding-left: 1.5rem;
    padding-right: 1.5rem;
    height: auto;
-   text-align: center;
    margin-bottom: 3.75rem;
+
+   &:last-child {
+     margin-bottom: 0;
+   }
 
    @media only screen and (min-width: $desktop-width) {
       width: calc(33% - 3rem);
@@ -66,6 +72,7 @@ export default Vue.extend({
 
    img {
     width: 25%;
+    height: auto;
     margin-bottom: 15px;
     margin-bottom: 15px;
     vertical-align: middle;
@@ -73,15 +80,6 @@ export default Vue.extend({
     @media only screen and (min-width: $desktop-width) {
       width: 70px;
     }
-   }
-
-   h4 {
-    font-weight: 700;
-    font-family: cera_promedium, Helvetica, Roboto, Arial,sans-serif;
-    font-size: 1.063rem;
-    line-height: 1.5;
-    margin-bottom: 10px;
-    text-transform: uppercase;
    }
 
    p {

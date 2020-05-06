@@ -1,7 +1,10 @@
 <template>
   <div class="includes-block">
     <div class="left-content content">
-      <img :src="require(`@/assets/img/includes/${img}`)">
+      <img
+        :src="require(`@/assets/img/includes/${img}`)"
+        loading="lazy"
+      >
     </div>
     <div class="right-content content">
       <h4>{{ title }}</h4>
@@ -65,6 +68,10 @@ export default Vue.extend({
    height: auto;
    margin-bottom: 3.75rem;
 
+   &:last-child {
+     margin-bottom: 0;
+   }
+
    @media only screen and (min-width: $desktop-width) {
       width: calc(50% - 3rem);
       margin-bottom: 0;
@@ -85,6 +92,7 @@ export default Vue.extend({
 
       img {
         width: 100%;
+        height: auto;
         margin-bottom: 15px;
         margin-bottom: 15px;
         vertical-align: middle;
@@ -97,20 +105,6 @@ export default Vue.extend({
 
       @media only screen and (min-width: $desktop-width) {
         width: 66%;
-      }
-
-      h4 {
-       font-weight: 700;
-       font-family: cera_promedium, Helvetica, Roboto, Arial,sans-serif;
-       font-size: 1.063rem;
-       line-height: 1.5;
-       margin-bottom: 10px;
-       text-transform: uppercase;
-      }
-
-      li {
-        font-size: .938rem;
-        font-family: cera_proregular, Helvetica, Roboto, Arial, sans-serif;
       }
     }
  }

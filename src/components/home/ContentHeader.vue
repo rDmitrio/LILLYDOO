@@ -91,31 +91,24 @@ export default Vue.extend({
     .info-overlay {
       align-self: flex-end;
       padding: 2.5rem 1rem 1.5rem 1rem;
-      width: 100%;
+      width: calc(100% - 2rem);
       background: rgba(255,255,255,.7);
 
       .button {
-        max-width: 15.6rem;
+        max-width: 15.6rem ;
 
         @media only screen and (min-width: $desktop-width) {
-          max-width: 18.1rem;
+          max-width:  18.1rem;
         }
       }
 
       @media only screen and (min-width: $desktop-width) {
         padding: 2.5rem 2.5rem 1.5rem 2.5rem;
-        width: 31.25rem;
+        width: calc(31.25rem - 5rem);
         margin-right: 4rem;
         align-self: center;
         justify-self: right;
       }
-        h1 {
-          font-family: Museo-300, Helvetica, Roboto, Arial,sans-serif;
-          font-size: 2.625rem;
-          line-height: 1.1;
-          display: block;
-          margin: auto;
-        }
     }
   }
 </style>

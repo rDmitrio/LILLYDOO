@@ -3,35 +3,9 @@
   <img class="oekotex-green-logo"
      src="@/assets/img/trialbox/oekotex_green_de.svg"
      alt="Oeko-Tex Certificate">
-
    <img
-     v-if="id === 0"
-     src="@/assets/img/trialbox/lillydoo-testpaket-10.jpg"
-     alt="`Lillydoo Testpaket mit Windeln in Größe 1 und 15 Feuchttüchern`"
-     class="trialbox-banner"
-   >
-   <img
-     v-else-if="id === 1"
-     src="@/assets/img/trialbox/lillydoo-testpaket-20.jpg"
-     alt="`Lillydoo Testpaket mit Windeln in Größe 2 und 15 Feuchttüchern`"
-     class="trialbox-banner"
-   >
-   <img
-     v-else-if="id === 2"
-     src="@/assets/img/trialbox/lillydoo-testpaket-30.jpg"
-     alt="`Lillydoo Testpaket mit Windeln in Größe 3 und 15 Feuchttüchern`"
-     class="trialbox-banner"
-   >
-   <img
-     v-else-if="id === 3"
-     src="@/assets/img/trialbox/lillydoo-testpaket-40.jpg"
-     alt="`Lillydoo Testpaket mit Windeln in Größe 4 und 15 Feuchttüchern`"
-     class="trialbox-banner"
-   >
-   <img
-     v-else-if="id === 4"
-     src="@/assets/img/trialbox/lillydoo-testpaket-50.jpg"
-     alt="`Lillydoo Testpaket mit Windeln in Größe 5 und 15 Feuchttüchern`"
+     :src="require(`@/assets/img/trialbox/lillydoo-testpaket-${ (id + 1) * 10}.jpg`)"
+     :alt="`Lillydoo Testpaket mit Windeln in Größe ${id + 1} und 15 Feuchttüchern`"
      class="trialbox-banner"
    >
 </div>
