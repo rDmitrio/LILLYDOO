@@ -8,7 +8,6 @@
       :title="item.title"
       :desc="item.desc"
       :img="item.img"
-      :class="[index === 2 ? 'last-block' : '']"
     >
       <a
         v-if="index === 1"
@@ -82,10 +81,6 @@ export default Vue.extend({
       flex-direction: row;
     }
   }
-
-   .last-block {
-      margin-bottom: 0 !important;
-    }
 
   .block-link {
     color: $primary-color;

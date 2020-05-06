@@ -9,7 +9,6 @@
           :img="item.img"
           :title="item.title"
           :desc="item.desc"
-          :class="[index === 1 ? 'last-block' : '']"
         />
       </div>
     </div>
@@ -26,10 +25,8 @@ export default Vue.extend({
     IncludesBlock
   },
   computed: {
-  },
-  data() {
-    return {
-      includes: [
+    includes() {
+      return [
         {
           img: 'lillydoo-little-blowballs-design-preview-tp.png',
           title: '10 LILLYDOO WINDELN',
@@ -40,14 +37,21 @@ export default Vue.extend({
           ]
         },
         {
-          img: 'water-wipes-15-small.png',
-          title: '15 FEUCHTTÜCHER MIT 99 % WASSER',
+          img: this.$store.getters['pack/getPackInfo'].hasSensetiveWipes ? 'sensitive-wipes-15-small.jpg' : 'water-wipes-15-small.png',
+          title: this.$store.getters['pack/getPackInfo'].hasSensetiveWipes ? '15 SENSITIVE FEUCHTTÜCHER' : '15 FEUCHTTÜCHER MIT 99 % WASSER',
           desc: [
             '0 % Parfüme & PEGs, 100 % biologisch abbaubar',
-            'Natürlich rein, extra mild, Alternative zu "Wasser & Watte"'
+            this.$store.getters['pack/getPackInfo'].hasSensetiveWipes
+              ? 'Extra dickes und kompostierbares Tuch'
+              : 'Natürlich rein, extra mild, Alternative zu "Wasser & Watte"'
           ]
         }
-      ]
+      ];
+    }
+  },
+  data() {
+    return {
+
     };
   },
   methods: {
@@ -82,10 +86,6 @@ export default Vue.extend({
       justify-content: start;
     }
    }
-
-   .last-block {
-      margin-bottom: 0 !important;
-    }
 
    h2 {
     padding: 1rem 0 1rem 0;

@@ -5,7 +5,7 @@
           <trialbox-images :id="imgId" />
       </div>
       <div class="column right-column">
-        <from class="addToCartTrialbox">
+        <form class="addToCartTrialbox">
           <h2>Entdecke unsere Hautfreundlichkeit</h2>
           <div class="tb-button-container">
             <p style="margin-bottom: 10; text-transform: uppercase;">Wähle Deine Größe</p>
@@ -36,7 +36,7 @@
             </li>
           </ul>
           <action-button class="button" link='#' title="In den Warenkorb legen" />
-        </from>
+        </form>
       </div>
     </div>
   </section>
@@ -75,11 +75,13 @@ export default Vue.extend({
         },
         {
           desc: '(9-14 KG)',
-          active: false
+          active: false,
+          hasSensetiveWipes: true
         },
         {
           desc: '(11-16 KG)',
-          active: false
+          active: false,
+          hasSensetiveWipes: true
         }
       ]
     };
@@ -87,6 +89,11 @@ export default Vue.extend({
   methods: {
     onTrialBtnClick(id) {
       this.imgId = id;
+
+      this.$store.dispatch('pack/setPackInfo', {
+        id,
+        hasSensetiveWipes: this.buttons[id].hasSensetiveWipes === true
+      });
 
       this.buttons.forEach((btn, index) => {
         if (index === id) {
