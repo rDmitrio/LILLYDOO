@@ -27,7 +27,7 @@ import Vue from 'vue';
 import HowItWorksBlock from '@/components/HowItWorksBlock.vue';
 
 export default Vue.extend({
-  name: 'ContentHeader',
+  name: 'HowItWorks',
   computed: {
 
   },
@@ -98,11 +98,12 @@ export default Vue.extend({
     text-align: center;
     margin-bottom: 10px;
     width: 100%;
-    font-size: 1.688rem;
+    font-size: 1.5rem;
     line-height: 1.2;
 
     @media only screen and (min-width: $desktop-width) {
       padding: 2rem 0 2rem 0;
+      font-size: 1.688rem;
     }
   }
   }

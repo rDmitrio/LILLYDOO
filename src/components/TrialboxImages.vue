@@ -41,7 +41,7 @@
 import Vue from 'vue';
 
 export default Vue.extend({
-  name: 'TrialboxButton',
+  name: 'TrialboxImages',
   props: {
     id: {
       required: false,
