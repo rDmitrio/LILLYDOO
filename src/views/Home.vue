@@ -4,6 +4,7 @@
     <trial-box />
     <how-it-works />
     <includes />
+    <blowballs />
   </div>
 </template>
 
@@ -13,13 +14,15 @@ import ContentHeader from '@/components/home/ContentHeader.vue';
 import TrialBox from '@/components/home/TrialBox.vue';
 import HowItWorks from '@/components/home/HowItWorks.vue';
 import Includes from '@/components/home/Includes.vue';
+import Blowballs from '@/components/home/Blowballs.vue';
 
 @Component({
   components: {
     ContentHeader,
     TrialBox,
     HowItWorks,
-    Includes
+    Includes,
+    Blowballs
   }
 })
 export default class Home extends Vue {
