@@ -7,7 +7,7 @@ import Vue from 'vue';
 
 
 export default Vue.extend({
-  name: 'TrialboxButton',
+  name: 'ActionButton',
   props: {
     title: {
       required: false,
