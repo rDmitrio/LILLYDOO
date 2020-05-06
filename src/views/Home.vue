@@ -2,6 +2,7 @@
   <div class="home">
     <content-header />
     <trial-box />
+    <how-it-works />
   </div>
 </template>
 
@@ -9,9 +10,14 @@
 import { Component, Vue } from 'vue-property-decorator';
 import ContentHeader from '@/components/home/ContentHeader.vue';
 import TrialBox from '@/components/home/TrialBox.vue';
+import HowItWorks from '@/components/home/HowItWorks.vue';
 
 @Component({
-  components: { ContentHeader, TrialBox }
+  components: {
+    ContentHeader,
+    TrialBox,
+    HowItWorks
+  }
 })
 export default class Home extends Vue {
 
